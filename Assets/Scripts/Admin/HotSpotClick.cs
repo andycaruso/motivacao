@@ -33,6 +33,11 @@ public class HotSpotClick : MonoBehaviour
                 return;
             }
             Debug.DrawLine(lastPoint, vect3, Color.red, 1);
+            GameObject _gbAux = Instantiate(Resources.Load("Prefabs/Rectangulo")) as GameObject;
+            lastPoint.z = -2;
+            _gbAux.transform.position = lastPoint;
+            Vector3 _diferenca = vect3 - lastPoint;
+            _gbAux.transform.localScale = _diferenca;
             lastPoint = vect3;
         }
     }
