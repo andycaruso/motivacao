@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class HotSpotClick : MonoBehaviour
 {
-    public Rigidbody rb;
-    public Vector3 lastPoint;
+    [SerializeField]
+    private Vector3 lastPoint, vect3;
+    [SerializeField]
+    private bool _flag = false;
+    [SerializeField]
+    private int _conta = 0;
     // Start is called before the first frame update
     void Start()
     {
-        //_r.SetPos1(new Vector2(0f, 0f));
-        //   _r.SetPos2(new Vector2(10f, 10f));
-        // _r.DesenhaRetangulo();
-        rb = GetComponent<Rigidbody>();
+        vect3 = new Vector3(0.0f,0.0f, -2.0f);
+        vect3 = Camera.main.ScreenToWorldPoint(vect3);
+        vect3.z = -2.0f;
+        lastPoint = vect3;
 
     }
 
@@ -21,24 +25,37 @@ public class HotSpotClick : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetMouseButtonUp(0))
         {
-            Vector3 vect3 = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
-            vect3 = Camera.main.ScreenToWorldPoint(vect3);
-            //I made the vector's Z value 0 because the object's Z coordinate is also 0. 
-            //This is to capture location in 2D space instead of 3D. This might be the problem. 
-            if (lastPoint == null)
+            if (_conta % 2 == 0)
+            {
+                
+                vect3 = new Vector3(Input.mousePosition.x, Input.mousePosition.y, -2.0f);
+                vect3 = Camera.main.ScreenToWorldPoint(vect3);
+                vect3.z = -2.0f;
+               
+                _conta++;
+
+            }
+            else
             {
                 lastPoint = vect3;
-                return;
+                _conta++;
+
             }
-            Debug.DrawLine(lastPoint, vect3, Color.red, 1);
-            GameObject _gbAux = Instantiate(Resources.Load("Prefabs/Rectangulo")) as GameObject;
-            lastPoint.z = -2;
-            _gbAux.transform.position = lastPoint;
-            Vector3 _diferenca = vect3 - lastPoint;
-            _gbAux.transform.localScale = _diferenca;
-            lastPoint = vect3;
+            //Debug.DrawLine(vect3, lastPoint,Color.red);
+
         }
+    }
+
+
+    void OnDrawGizmos()
+    {
+        // Draw a yellow sphere at the transform's position
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(vect3, 0.2f);
+        Gizmos.DrawSphere(lastPoint, 0.2f);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(vect3, lastPoint) ;
     }
 }
