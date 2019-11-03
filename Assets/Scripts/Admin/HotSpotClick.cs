@@ -57,5 +57,9 @@ public class HotSpotClick : MonoBehaviour
         Gizmos.DrawSphere(lastPoint, 0.2f);
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(vect3, lastPoint) ;
+       
+        // Gizmos.DrawLine(vect3, new Vector3(3f,3f,-2f));
     }
+
+
 }
