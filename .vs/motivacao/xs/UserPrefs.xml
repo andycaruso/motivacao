@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{626EE7E2-3CCF-D4C8-8639-8FD7F407EB2F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Admin/HotSpotClick.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Area.cs">
     <Files>
-      <File FileName="Assets/Scripts/Admin/HotSpotClick.cs" Line="46" Column="4" />
+      <File FileName="Assets/Scripts/Admin/_CarregaImagemPlano.cs" Line="19" Column="17" />
+      <File FileName="Assets/Scripts/Area.cs" Line="7" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,9 +10,8 @@
           <Node name="motivacao" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Admin" expanded="True">
-                  <Node name="HotSpotClick.cs" selected="True" />
-                </Node>
+                <Node name="Admin" expanded="True" />
+                <Node name="Area.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -21,7 +21,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fdb0d252-f651-4fc1-82cb-1044c2e757df" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1509f293-077c-40a8-9cf4-ce3678b0b98a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
