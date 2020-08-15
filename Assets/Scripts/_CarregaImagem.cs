@@ -11,6 +11,7 @@ public class _CarregaImagem : MonoBehaviour
     [SerializeField]
     public Button _imagem;
 
+    //
     // Start is called before the first frame update
     void Start()
     {
