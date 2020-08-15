@@ -23,7 +23,7 @@ public class _ClickBotao : MonoBehaviour
     /// </summary>
     public void FazAcao()
     {
-     
+     //AQUI!
        // StaticClass.CrossSceneInformation = getArquivoImagem();
       //  GuardaTextura.CrossSceneSprite = getTextura();
         PlayerPrefs.SetString("imagem", _arquivoImagem);
@@ -78,7 +78,7 @@ public class _ClickBotao : MonoBehaviour
 
     public void OnClick()
     {
-        //Debug.Log(_arquivoImagem);
+        Debug.Log(_arquivoImagem);
         FazAcao();
     }
 

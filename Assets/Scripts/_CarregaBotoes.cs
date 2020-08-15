@@ -29,9 +29,8 @@ public class _CarregaBotoes : MonoBehaviour
 
         foreach (FileInfo f in info)
         {
-
-            if (i < 9)
-            {
+          
+          
                 _textura = new CarregaSprite().getSprite(f.ToString());
 
                 GameObject _gbAux = Instantiate(Resources.Load("Prefabs/Botao")) as GameObject;
@@ -46,7 +45,7 @@ public class _CarregaBotoes : MonoBehaviour
                 Instantiate(_gbAux, _buttonParent);
                 
              
-            }
+            
             i++;
         }
 
