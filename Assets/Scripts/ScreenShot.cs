@@ -56,7 +56,7 @@ public class ScreenShot : MonoBehaviour
 		filename += System.DateTime.Now.ToString ("dd-MM-yyyy") + System.DateTime.Now.ToString ("hhmmss");
 		filename += ".png";
 		Debug.Log (filename);
-		ScreenCapture.CaptureScreenshot (filename);
+		ScreenCapture.CaptureScreenshot ("Capturadas/" + filename);
 
 		// Show UI after we're done
 		AtiveGO ();

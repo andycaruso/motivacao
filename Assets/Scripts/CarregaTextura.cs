@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 
-public class CarregaTextura : MonoBehaviour
+public class CarregaTextura 
 {
     public Texture getTextura(string filePath)
     {
